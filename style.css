@@ -40,6 +40,56 @@ html {
     background-color: rgba(255, 255, 255, 0.2); /* Add a semi-transparent background */
 }
 
+audio {
+    position: fixed;
+    bottom: -60px; /* Adjust this value to position it just above the taskbar */
+    right: 1px; /* Adjust this value to position it from the right edge */
+    height: 100%;
+    z-index: 1001; /* Ensure it appears above other elements */
+
+}
+
+audio::-webkit-media-controls-panel{
+    position: fixed;
+    width: 90%;
+    bottom: 102px;
+    background-color: rgba(0, 0, 0, 0.678); /* Transparent background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.589); /* Add box-shadow effect */
+}
+
+audio::-webkit-media-controls-play-button{
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display{
+    color: rgb(168, 231, 252);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    color: rgb(168, 231, 252);
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: #B1D4E0;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: -5px;
+}
+audio::-webkit-media-controls-volume-slider {
+    background-color: lightblue;
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
 /* Taskbar Styles */
 .taskbar {
     display: flex;
